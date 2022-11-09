@@ -1,4 +1,3 @@
-#SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='registry.tanzu-lab.com/tap/tanzu-java-web-app-source')
 SOURCE_IMAGE = 'registry.tanzu-lab.com/tap/tanzu-java-web-app-source'
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='workloads')
