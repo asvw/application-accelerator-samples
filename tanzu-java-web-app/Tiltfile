@@ -3,6 +3,8 @@ LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
 NAMESPACE = os.getenv("NAMESPACE", default='workloads')
 OUTPUT_TO_NULL_COMMAND = os.getenv("OUTPUT_TO_NULL_COMMAND", default=' > /dev/null ')
 
+allow_k8s_contexts('arn:aws:eks:eu-north-1:329853248470:cluster/tap-cluster2')
+
 k8s_custom_deploy(
     'tanzu-java-web-app',
     apply_cmd="tanzu apps workload apply -f config/workload.yaml --debug --live-update" +
